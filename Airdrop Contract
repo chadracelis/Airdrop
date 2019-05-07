@@ -1,0 +1,25 @@
+pragma solidity ^0.4.16;
+
+
+interface ChadCoin {
+    function transferFrom(address from, address to, uint tokens);
+}
+
+contract Airdrop {
+    
+    ChadCoin public token;
+    address tokenHolder;
+    uint amountToTransfer;
+
+
+    constructor(address addressOfToken, address addressOfHolder, uint amount) payable {
+        token = ChadCoin(addressOfToken);
+        tokenHolder = addressOfHolder;
+        amountToTransfer = amount;
+
+    }
+
+    function drop() public {
+        token.transferFrom(tokenHolder, msg.sender, amountToTransfer);
+    }
+}
