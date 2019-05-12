@@ -15,7 +15,7 @@
    'Amount of tokens allowed to airdrop in total'
    
    
-   /////////INTERACTING WITH AIRDROP////////////////
+/////////INTERACTING WITH AIRDROP////////////////
 1. Create or use an existing MyEtherWallet address
 2. Go to 'Contracts' tab under MyEtherWallet and copy and paste address and ABI of 'Airdrop' Contract
 3. Click access, select function 'drop' and finally generate transaction
